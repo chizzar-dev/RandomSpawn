@@ -3,7 +3,6 @@ version: ${project.version}
 main: com.metox.randomspawn.RandomSpawnPlugin
 api-version: 1.13
 author: chizzar-dev
-website: https://discord.gg/forges
 description: Ilk giris ve yeniden dogusta guvenli rastgele konum, ayrica /rtp.
 
 commands:
