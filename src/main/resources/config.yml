@@ -1,0 +1,67 @@
+# RandomSpawn - chizzar-dev
+# https://github.com/chizzar-dev/RandomSpawn
+
+# Hangi dunya kullanilsin (bos birakirsan ana dunya)
+world: ""
+
+# Rastgele nokta bu merkezin cevresinden secilir
+center-x: 0
+center-z: 0
+
+# En fazla ve en az uzaklik (blok). min-radius, spawn cevresine dusmeyi engeller.
+radius: 1000
+min-radius: 100
+
+# Guvenli nokta bulmak icin toplam deneme sayisi
+max-attempts: 40
+
+# Her tick'te kac deneme yapilsin. Dusuk tutmak sunucuyu daha az yorar.
+attempts-per-tick: 3
+
+# Su ustune isinlanmayi engelle
+avoid-water: true
+
+# Bu bloklarin ustune asla isinlanma (asagidakilere ek olarak lav, ates,
+# kaktus, magma, portal ve kar kuyusu her zaman guvensiz sayilir)
+unsafe-blocks:
+  - "SWEET_BERRY_BUSH"
+
+# Nether gibi tavani olan dunyalarda tarama bu yukseklikten asagi dogru yapilir
+nether-scan-from: 100
+nether-scan-to: 5
+
+# Ilk kez girenler rastgele yere isinlansin
+first-join: true
+
+# Olup yeniden dogunca rastgele yere dogsun
+respawn: true
+
+# Yatak/anchor spawn'i olsa bile rastgeleye zorla (false = yatagi koru)
+override-bed: false
+
+rtp:
+  enabled: true
+  # Isinlanmadan once beklenecek sure (saniye, 0 = aninda)
+  warmup: 3
+  # Iki /rtp arasi bekleme (saniye, 0 = kapali)
+  cooldown: 60
+  # Beklerken hareket edilirse iptal olsun mu
+  cancel-on-move: true
+  # true = oyuncunun bulundugu dunyada isinlanir, false = yukaridaki 'world'
+  use-current-world: false
+
+messages:
+  players-only: "&cBu komut yalnizca oyuncular icindir."
+  no-permission: "&cBunun icin yetkin yok."
+  player-not-found: "&cOyuncu bulunamadi ya da cevrimdisi."
+  rtp-disabled: "&cRastgele isinlanma su an kapali."
+  searching: "&7Guvenli bir yer araniyor..."
+  countdown: "&eIsinlaniyorsun... &f%time%"
+  cancelled-move: "&cHareket ettin, isinlanma iptal edildi."
+  already-warming: "&cZaten isinlanmayi bekliyorsun."
+  cooldown: "&cTekrar denemek icin bekle: &e%time%s"
+  failed: "&cGuvenli bir yer bulunamadi, tekrar dene."
+  teleported: "&aRastgele bir yere isinlandin!"
+  sent-other: "&a%player% rastgele bir yere isinlandi."
+  world-missing: "&cHedef dunya bulunamadi."
+  reloaded: "&aRandomSpawn ayarlari yeniden yuklendi."

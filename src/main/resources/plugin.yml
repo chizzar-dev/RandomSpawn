@@ -1,0 +1,31 @@
+name: RandomSpawn
+version: ${project.version}
+main: com.metox.randomspawn.RandomSpawnPlugin
+api-version: 1.13
+author: chizzar-dev
+website: https://discord.gg/forges
+description: Ilk giris ve yeniden dogusta guvenli rastgele konum, ayrica /rtp.
+
+commands:
+  randomspawn:
+    description: RandomSpawn ayarlarini yeniden yukle
+    usage: /randomspawn reload
+    aliases: [rs]
+  rtp:
+    description: Rastgele guvenli bir yere isinlan
+    usage: /rtp [oyuncu]
+    aliases: [randomtp, rastgele]
+
+permissions:
+  randomspawn.reload:
+    description: Configi yeniden yukleyebilir
+    default: op
+  randomspawn.rtp:
+    description: /rtp komutunu kullanabilir
+    default: true
+  randomspawn.rtp.bypass:
+    description: Bekleme suresi ve gecikme olmadan isinlanir
+    default: op
+  randomspawn.rtp.others:
+    description: Baska oyunculari isinlayabilir
+    default: op
